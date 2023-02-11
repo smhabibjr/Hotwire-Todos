@@ -13,6 +13,7 @@ class TodosController < ApplicationController
   # GET /todos/new
   def new
     @todo = Todo.new
+    asdfasdf = 12
   end
 
   # GET /todos/1/edit
