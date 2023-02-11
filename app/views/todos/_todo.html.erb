@@ -1,6 +1,8 @@
-<div id="<%= dom_id todo %>">
-  <p>
-    <%= todo.title %>
-  </p>
+<div id="<%= "#{dom_id(todo)}_item" %>">
+  <%= turbo_frame_tag dom_id(todo) do %>
+    <%= link_to todo.title, edit_todo_path(todo) %>
+    <%= button_to "delete", todo_path(todo), method: :delete, class: "btn btn-danger" %>
+  <% end %>
+
 
 </div>
