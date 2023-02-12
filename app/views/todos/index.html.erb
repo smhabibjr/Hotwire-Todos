@@ -2,19 +2,19 @@
 <p style="color: green"><%= notice %></p>
 
  <div class="row">
-   <div class="col-lg-12">
-     <h1>Todos</h1>
+   <div class="col-12">
+     <h1>Hotwire Todos</h1>
    </div>
  </div>
 
   <div class="row">
-    <div class="d-flex justify-content-center">
+    <div class="col-12">
       <%= render "form", todo:Todo.new %>
     </div>
   </div>
 
   <%= turbo_stream_from "todos" %>
-  <div id="todos">
+  <div class="row mt-2" id="todos">
       <%= render @todos %>
   </div>
 

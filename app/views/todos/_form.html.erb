@@ -1,4 +1,4 @@
-<div class="w-100">
+<div class="new-todo-form">
 <%= form_with(model: todo, id: "#{dom_id(todo)}_form") do |form| %>
 
     <% if todo.errors.any? %>
@@ -13,17 +13,19 @@
       </div>
     <% end %>
 
-    <div class="row col-sm-6">
-      <div class="form-group">
-        <%= form.label :title, style: "display: block" %>
-        <%= form.text_field :title, :class => "form-control", :placeholder => "Add new todo" %>
+    <div class="row">
+      <div class="col-10 d-flex align-items-center">
+        <div class="form-group w-100">
+          <%= form.text_field :title, :class => "form-control", :placeholder => "Add new todo" %>
+        </div>
+     </div>
+      <div class="col-2">
+        <div class="form-group d-flex justify-content-end align-items-center">
+          <%= form.submit :class => "btn btn-primary p-2 mt-2" %>
+        </div>
       </div>
-    </div>
 
-    <div>
-      <%= form.submit :class => "btn btn-primary p-2 mt-2" %>
     </div>
-
 
 <% end %>
 </div>
